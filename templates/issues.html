@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for issue in issue_list %}
+    <div class="container-fluid ">
+        <div class="card mt-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title"><a href="#" class="card-link">{{ issue.issue_name }}</a></h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ issue.id }}</h6>
+                <p class="card-text">{{ issue.body }}</p>
+                <p class="card-text">{{ issue.date_created }}</p>
+                <p class="card-text">{{ issue.date_updated }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock content %}
