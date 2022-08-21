@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% for issue in issue_list %}
+<a class="btn btn-primary" href="{% url 'create' %}">+ New Issue</a>
+<hr class="my-4">
+{% for issue in dataset %}
 <div class="card mt-2">
     <h3 class="card-header">{{ issue.id }} | {{ issue.issue_name }}</h5>
     <div class="card-body">
@@ -12,6 +14,5 @@
         <a href="#" class="btn btn-danger">Delete</a>
     </div>
 </div>
-
 {% endfor %}
 {% endblock content %}
