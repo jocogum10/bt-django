@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card mt-2">
+    <h3 class="card-header bg-dark text-bg-primary">{{ issue.id }} | {{ issue.issue_name }}</h5>
+    <div class="card-body">
+        <h5 class="card-title">{{ issue.body }}</h5>
+        <p class="card-text">Author: {{ issue.created_by }}</p>
+        <p class="card-text">Created: {{ issue.date_created }} | Updated: {{ issue.date_updated }}</p>
+        <a href="{% url 'issues' %}" class="btn btn-primary">Back to Issues</a>
+    </div>
+</div>
+{% endblock content %}
